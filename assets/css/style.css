@@ -1,0 +1,82 @@
+:root {
+  --theme-color: rgb(43, 43, 43);
+  --box-border-color: rgb(236, 209, 85);
+  --border-glow: 0px 0px 8px 2px #888888 inset;
+}
+
+* {
+  margin: 20px;
+  background-color: var(--theme-color);
+  color: rgb(255, 237, 199);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-flow: column;
+  border: 3px dashed var(--box-border-color);
+  border-radius: 20px;
+  min-width: 30%;
+  box-sizing: border-box;
+  margin-bottom: 3em;
+  flex-basis: 30%;
+  box-shadow: var(--border-glow);
+}
+
+h2 {
+  border: 3px solid var(--box-border-color);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  top: -2.3em;
+  margin-bottom: -2.3em;
+  display: inline-flex;
+  box-shadow: var(--border-glow);
+}
+
+.code-snippet {
+  user-select: all;
+  border-radius: 10px;
+  background-color: rgb(141, 115, 0);
+  flex-basis: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: rgb(141, 115, 0);
+}
+
+@media only screen and (max-width: 1280px) {
+  .card {
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    min-width: 100%;
+  }
+}
+
+::selection {
+  color: rgb(53, 202, 212);
+}
+
+footer {
+  text-align: center;
+}
